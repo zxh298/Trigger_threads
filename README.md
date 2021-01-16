@@ -1,9 +1,8 @@
 # Trigger_threads
 
-This is a multi-threads version of the Trigger program (https://github.com/zxh298/Trigger).
+This is a multi-threads version of the original Trigger program (https://github.com/zxh298/Trigger).
 
-As it is too slow to search trigger of with more than five observed variables, so we modify the original Trigger program by running on
-four threads. This multi-threads version is much faster but runs with more CPU usage. The number of threads could depend on the number of the (logical) cores of your CPU, but we fix to four for now.
+As it is too slow to search trigger of with more than five observed variables, so we modify the original Trigger program by running on four threads. This multi-threads version is much faster but runs with more CPU usage.
 
      variable number      structures number                   structure number                 number of triggers
                           (without disconnected variables)    (with disconnected variables)                                 
@@ -12,7 +11,7 @@ four threads. This multi-threads version is much faster but runs with more CPU u
           5                          268                                302                             57
           6                          5667                               5984                            2525
 
-"Separated" or "Isolated" means one or more variables are disconnected in the structure, For example A is a separated variables in 
+"Disconnected" means nodes are totally disconnected in a DAG. For example A is a separated variables in 
 the network (A,B,C,D): A B->C<-D
 
 Please see more details in https://github.com/zxh298/Trigger
